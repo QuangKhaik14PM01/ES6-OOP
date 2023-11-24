@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lí học viên</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Research Center Management</h1>
+
+        <form id="personForm" class="mb-3">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" id="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="code">Code:</label>
+                <input type="text" class="form-control" id="code" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="type">User Type:</label>
+                <select class="form-control" id="type">
+                    <option value="student">Student</option>
+                    <option value="employee">Employee</option>
+                    <option value="customer">Customer</option>
+                </select>
+            </div>
+
+            <div id="additionalFields" class="mb-3"></div>
+
+            <button type="button" class="btn btn-primary" onclick="addPerson()">Add Person</button>
+        </form>
+
+        <h2>Person List</h2>
+
+        <h2>Filtered Person List</h2>
+        <ul id="filteredList" class="list-group"></ul>
+
+        <button type="button" class="btn btn-warning" onclick="updatePerson()">Update Person</button>
+        <button type="button" class="btn btn-info" onclick="sortByName()">Sort by Name</button>
+        <button type="button" class="btn btn-success" onclick="filterByType()">Filter by Type</button>
+
+        <ul id="personList" class="list-group"></ul>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src='/index.js' ></script>
+</body>
+</html>
